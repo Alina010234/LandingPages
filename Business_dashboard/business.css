@@ -73,7 +73,7 @@ ul li:hover {
   background-color: pink;
   border-radius: 50px;
   color: red;
-  animation: pulse 1s infinite;
+  animation: pulse 2s infinite;
 }
 @keyframes pulse {
   0% {
@@ -86,7 +86,7 @@ ul li:hover {
     transform: scale(1);
   }
   0% {
-    box-shadow: 0 0 0 0 rgb(243, 88, 129);
+    box-shadow: 0 0 0 0 rgb(238, 3, 66);
   }
   70% {
     box-shadow: 0 0 0 10px rgba(231, 7, 78, 0);
