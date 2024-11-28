@@ -19,9 +19,8 @@
   border-radius: 40px;
   margin-top: 0.6em;
   background-color: rgb(228, 222, 222);
-    display: grid;
-    grid-template-columns: 0.3fr 1fr 0.5fr;
-
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.5fr;
 }
 .left-side {
   width: 100%;
@@ -74,7 +73,29 @@ ul li:hover {
   background-color: pink;
   border-radius: 50px;
   color: red;
+  animation: pulse 1s infinite;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+  0% {
+    box-shadow: 0 0 0 0 rgb(243, 88, 129);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 7, 78, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(88, 120, 243, 0);
+  }
+}
+
 .button:hover {
   background-color: red;
   transform: scale(1.2);
