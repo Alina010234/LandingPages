@@ -3,67 +3,207 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Landify Dashboard</title>
     <link rel="stylesheet" href="landify.css" />
+    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
   <body>
-    <div class="container-mare d-flex-center">
-      <div class="s1 d-flex-center">
-        <div class="s1-up d-flex-center size">
-          <div class="logo d-flex-center">
-            <span class="material-symbols-outlined"> star_rate </span>
-            <p>Landify</p>
-          </div>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fas fa-home"></i>
+          <h2>Landify</h2>
+        </div>
+        <nav>
           <ul>
-            <li>
-              <span class="material-symbols-outlined">grid_view</span>Dashboard
-            </li>
-            <li>
-              <span class="material-symbols-outlined">location_city</span
-              >Properties
-            </li>
-            <li><span class="material-symbols-outlined">person</span>Agents</li>
-            <li>
-              <span class="material-symbols-outlined"> groups</span>Customers
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> shopping_bag</span>Orders
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> transition_chop</span
-              >Transitions
-            </li>
-            <li><span class="material-symbols-outlined"> mail</span>Inbox</li>
-            <li>
-              <span class="material-symbols-outlined"> edit_square </span>Post
-            </li>
+            <li class="active"><i class="fas fa-th-large"></i> Dashboard</li>
+            <li><i class="fas fa-building"></i> Properties</li>
+            <li><i class="fas fa-users"></i> Agents</li>
+            <li><i class="fas fa-user-friends"></i> Customers</li>
+            <li><i class="fas fa-shopping-cart"></i> Orders</li>
+            <li><i class="fas fa-exchange-alt"></i> Transitions</li>
+            <li><i class="fas fa-inbox"></i> Inbox</li>
+            <li><i class="fas fa-paper-plane"></i> Post</li>
           </ul>
-        </div>
-        <div class="s1-bottom d-flex-center size">
-          <div class="list">
-            <ul>
-              <li>
-                <span class="material-symbols-outlined">settings</span> Settings
-              </li>
-              <li>
-                <span class="material-symbols-outlined">help_center</span>Help
-                Center
-              </li>
-            </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="settings"><i class="fas fa-cog"></i> Settings</div>
+          <div class="help-center">
+            <i class="fas fa-question-circle"></i> Help Center
           </div>
-          <div class="s1-name d-flex-center">
-            <img src="./landify-assets/alina-dashboard.jpg" alt="alina" />
-            <p>Alina Padureanu</p>
+          <div class="user-profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Erin Korsgaard</span>
           </div>
         </div>
-      </div>
-      <div class="s2 d-flex-center">
-        <div class="s2-header"></div>
-      </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="user-info">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle profile-icon"></i>
+            <div class="user-details">
+              <h4>Erin Korsgaard</h4>
+              <p>erin@gmail.com</p>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-info">
+              <h3>No. of Properties</h3>
+              <h2>5467</h2>
+              <p class="change negative">-3.22 Form last month</p>
+            </div>
+            <i class="fas fa-building stat-icon"></i>
+          </div>
+          <div class="stat-card">
+            <div class="stat-info">
+              <h3>Regi. Agents</h3>
+              <h2>607</h2>
+              <p class="change positive">+5.54 Form last month</p>
+            </div>
+            <i class="fas fa-users stat-icon"></i>
+          </div>
+          <div class="stat-card">
+            <div class="stat-info">
+              <h3>Customers</h3>
+              <h2>5467</h2>
+              <p class="change negative">-2.33% Form last month</p>
+            </div>
+            <i class="fas fa-user-friends stat-icon"></i>
+          </div>
+          <div class="stat-card">
+            <div class="stat-info">
+              <h3>Revenue</h3>
+              <h2>5467</h2>
+              <p class="change positive">+4.25% Form last month</p>
+            </div>
+            <i class="fas fa-dollar-sign stat-icon"></i>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+          <div class="income-analytics">
+            <div class="chart-header">
+              <h3>Income Analytics</h3>
+              <select>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="chart-placeholder">
+              <!-- Placeholder for chart -->
+              <div class="chart-bars">
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 40%"></div>
+                <div class="bar" style="height: 70%"></div>
+                <div class="bar" style="height: 90%"></div>
+                <div class="bar" style="height: 50%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="balance-card">
+            <h3>My Balance</h3>
+            <h2>$117,000.43</h2>
+            <div class="balance-stats">
+              <div class="stat">
+                <p>Property</p>
+                <h4>15,780</h4>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="stat">
+                <p>Revenue</p>
+                <h4>$78.3M</h4>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 65%"></div>
+                </div>
+              </div>
+              <div class="stat">
+                <p>Customer</p>
+                <h4>9,154</h4>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="transactions">
+          <div class="table-header">
+            <h3>Recent Transaction History</h3>
+            <select>
+              <option>This Month</option>
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Orders</th>
+                <th>Date</th>
+                <th>Property type</th>
+                <th>Property Name</th>
+                <th>Status</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="order-info">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                      <p>David Nurmi</p>
+                      <span>#0144542</span>
+                    </div>
+                  </div>
+                </td>
+                <td>15 Dec 2024</td>
+                <td>Residential</td>
+                <td>456 Oak Avenue, NE 68502</td>
+                <td><span class="status-paid">Paid</span></td>
+                <td>$4,456,437</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="order-info">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                      <p>David Nurmi</p>
+                      <span>#0768937</span>
+                    </div>
+                  </div>
+                </td>
+                <td>14 Dec 2024</td>
+                <td>Land</td>
+                <td>789 Pine Road, WI 53703</td>
+                <td><span class="status-cancel">Cancel</span></td>
+                <td>$7,475,567</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
   </body>
 </html>
